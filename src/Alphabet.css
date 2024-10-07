@@ -1,0 +1,42 @@
+/* Alphabet.css */
+.alphabet-container {
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    max-width: 400px;
+    margin: 20px auto;
+    text-align: center;
+  }
+  
+  .alphabet-title {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 16px;
+  }
+  
+  .alphabet-list {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .alphabet-item {
+    font-size: 18px;
+    margin: 5px;
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+    border-radius: 4px;
+    width: 40px;
+    text-align: center;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+  }
+  
+  .alphabet-item:hover {
+    background-color: #0056b3;
+  }
+  
