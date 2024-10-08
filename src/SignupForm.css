@@ -1,0 +1,174 @@
+/* SignupForm.css */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-image: url('https://png.pngtree.com/thumb_back/fh260/background/20200714/pngtree-modern-double-color-futuristic-neon-background-image_351866.jpg');
+  background-size: cover; 
+  background-position: center; 
+  background-repeat: no-repeat; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.signup-form {
+  background: rgba(255, 255, 255, 0.4); 
+  backdrop-filter: blur(10px); 
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  width: 650px; 
+  padding: 3.5rem;
+  margin-bottom: 20px; 
+  transition: transform 0.2s ease-in-out; /* Durée de la transition */
+  will-change: transform; /* Aide à l'optimisation */
+}
+
+.signup-form:hover {
+  transform: scale(1); /* Effet de zoom réduit */
+  /* filter: blur(1px); */ /* Utiliser cela au lieu du zoom si nécessaire */
+}
+
+.signup-form h2 {
+  text-align: center;
+  color: #333;
+  margin-top: -10px;
+  margin-bottom: 1.5rem;
+  font-weight: bold; 
+}
+
+.input-group {
+  position: relative;
+  margin-bottom: 2.5rem; 
+}
+
+.input-group i {
+  position: absolute;
+  left: 10px;
+  top: 40%; 
+  transform: translateY(-50%);
+  color: #777;
+}
+
+input {
+  width: 100%;
+  padding: 12px 40px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  outline: none;
+  font-size: 16px;
+  font-weight: bold; 
+  transition: border-color 0.3s ease;
+}
+
+input:focus {
+  border-color: #6a11cb; 
+  box-shadow: 0 0 5px rgba(106, 17, 203, 0.5);
+}
+
+button[type="submit"] {
+  width: 100%;
+  padding: 12px;
+  background-color: #2575fc; 
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  font-weight: bold; 
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover {
+  background-color: #1e5bb8; 
+}
+
+.error {
+  color: white; 
+  background-color: #e74c3c; 
+  font-size: 14px;
+  padding: 5px; 
+  border-radius: 5px; 
+  position: absolute;
+  bottom: -30px; 
+  left: 40px; 
+}
+
+h2 {
+  font-family: 'Poppins', sans-serif; 
+  font-size: 36px; 
+  font-weight: 700; 
+  color: white; 
+  text-align: center; 
+  margin-bottom: 20px; 
+  position: relative; 
+  padding: 10px; 
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7); 
+}
+
+h2::before {
+  content: ''; 
+  position: absolute; 
+  top: 0; 
+  left: 0; 
+  width: 100%; 
+  height: 100%; 
+  background: rgba(255, 255, 255, 0.863); 
+  border-radius: 8px; 
+  z-index: -1; 
+}
+
+.toggle-password {
+  position: absolute;
+  right: 35px; 
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  color: #777;
+  transition: color 0.3s ease;
+}
+
+.toggle-password:hover {
+  color: #6a11cb; 
+}
+
+.password-strength {
+  background: #eee;
+  border-radius: 5px;
+  height: 8px;
+  margin-top: 5px; 
+}
+
+.strength-bar {
+  height: 100%;
+  border-radius: 5px;
+  transition: width 0.3s ease;
+}
+
+button[type="submit"] i {
+  margin-right: 8px; 
+}
+
+.notification {
+  position: fixed; 
+  top: 20px; 
+  left: 50%; 
+  transform: translateX(-50%); 
+  background-color: #4caf50; 
+  color: white; 
+  padding: 10px 20px; 
+  border-radius: 5px; 
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2); 
+  z-index: 1000; 
+  transition: opacity 0.5s ease; 
+  opacity: 1; 
+}
+
+.notification.fade-out {
+  opacity: 0; 
+}

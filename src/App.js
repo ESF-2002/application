@@ -1,14 +1,20 @@
-// App.js
 import React from 'react';
-import Alphabet from './Alphabet'; // Import du composant Alphabet
+import './App.css';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'; // Mettez à jour l'importation
+import SignupForm from './SignupForm'; // Importez le composant
+import PokemonList from './PokemonList'; // Importez le nouveau composant
 
-const App = () => {
+function App() {
   return (
-    <div>
-      <h1>Alphabet Listing Application</h1>
-      <Alphabet />
-    </div>
+    <Router>
+      <div className="App">
+        <Routes> {/* Remplacez Switch par Routes */}
+          <Route path="/signup" element={<SignupForm />} /> {/* Utilisez element au lieu de component */}
+          <Route path="/pokemon" element={<PokemonList />} /> {/* Utilisez element ici aussi */}
+        </Routes>
+      </div>
+    </Router>
   );
-};
+}
 
 export default App;
